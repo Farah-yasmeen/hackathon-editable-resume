@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Resume Builder</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body background="moon-7105626_640.jpg" >
+    <div class="container">
+        <h1>Resume Builder</h1>
+
+        <!-- Form to collect resume details -->
+        <form id="resumeForm" >
+            <section >
+                <h2>Personal Information</h2>
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName">
+
+                <label for="email">Email:</label>
+                <input type="email" id="email">
+
+                <label for="phone">Phone:</label>
+                <input type="text" id="phone" >
+            </section>
+
+            <section>
+                <h2>Education</h2>
+                <label for="degree">Degree:</label>
+                <input type="text" id="degree" >
+
+                <label for="university">University:</label>
+                <input type="text" id="university" >
+
+                <label for="graduationYear">Graduation Year:</label>
+                <input type="text" id="graduationYear" >
+            </section>
+
+            <section>
+                <h2>Work Experience</h2>
+                <label for="jobTitle">Job Title:</label>
+                <input type="text" id="jobTitle" >
+
+                <label for="company">Company Name:</label>
+                <input type="text" id="company" >
+
+                <label for="jobDescription">Job Description:</label>
+                <textarea id="jobDescription" ></textarea>
+            </section>
+
+            <section>
+                <h2>Skills</h2>
+                <label for="skills">Skills (comma-separated):</label>
+                <input type="text" id="skills">
+            </section>
+
+         <center>   <button type="button" id="generateResume">Generate Resume</button></center>
+         
+        </form>
+
+        <!-- Resume output area -->
+        <div id="resumeOutput" class="hidden">
+           <h2>Your Resume</h2>
+            
+        <div id="outputContent"></div>
+           
+          
+         <center><button id="downloadButton">Download</button></center> 
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
